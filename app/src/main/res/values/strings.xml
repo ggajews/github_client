@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GithubSearch</string>
+    <string name="action_settings">Settings</string>
+    <string name="closed_issues">Closed issues: %d</string>
+    <string name="open_issues">Open issues: %d</string>
+    <string name="open_pull_requests">Open PRs: %d</string>
+    <string name="merged_pull_requests">Merged PRs: %d</string>
+    <string name="closed_pull_requests">Closed PRs: %d</string>
+    <string name="repositories">Repositories</string>
+    <string name="repository_details">Repository Details</string>
+    <string name="repositories_fetching_error">Error while fetching repositories</string>
+    <string name="retry">Retry</string>
+</resources>

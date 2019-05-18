@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="Hello-World stats" />
+
+            <TextView
+                android:id="@+id/openIssues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Open issues: 20" />
+
+            <TextView
+                android:id="@+id/closedIssues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Closed issues: 30" />
+
+            <TextView
+                android:id="@+id/openPullRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Open PRs: 1" />
+
+            <TextView
+                android:id="@+id/mergedPullRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Merged PRs: 11" />
+
+            <TextView
+                android:id="@+id/closedPullRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:text="Closed PRs: 12" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
