@@ -1,28 +1,28 @@
 package com.grzegorzgajewski.githubsearch.data
 
+import com.apollographql.apollo.github.GithubRepositoriesQuery
 import com.grzegorzgajewski.githubsearch.domain.Repository
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import com.grzegorzgajewski.githubsearch.data.Repository as ApiRepository
 
 
 class MappersTest {
 
     @Test
-    fun `empty list maps to empty list`() {
-        val responseData = ResponseData(
-            User(
-                Repositories(
-                    listOf(
-                        ApiRepository(
-                            id = "ID",
+    fun `GithubRepositoriesQuery nodes maps to Repository list`() {
+        val responseData = GithubRepositoriesQuery.Data(
+            GithubRepositoriesQuery.RepositoryOwner(
+                "", GithubRepositoriesQuery.Repository(
+                    "", listOf(
+                        GithubRepositoriesQuery.Node(
+                            __typename = "", id = "ID",
                             url = "URL",
                             name = "Name",
-                            openIssues = TotalCount(0),
-                            closedIssues = TotalCount(1),
-                            openPullRequests = TotalCount(2),
-                            mergedPullRequests = TotalCount(3),
-                            closedPullRequests = TotalCount(4)
+                            openIssues = GithubRepositoriesQuery.OpenIssue("", 0),
+                            closedIssues = GithubRepositoriesQuery.ClosedIssue("", 1),
+                            openPullRequests = GithubRepositoriesQuery.OpenPullRequest("", 2),
+                            mergedPullRequests = GithubRepositoriesQuery.MergedPullRequest("", 3),
+                            closedPullRequests = GithubRepositoriesQuery.ClosedPullRequest("", 4)
                         )
                     )
                 )

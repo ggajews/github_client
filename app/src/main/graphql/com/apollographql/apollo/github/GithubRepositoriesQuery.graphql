@@ -1,0 +1,26 @@
+query GithubRepositoriesQuery {
+  repositoryOwner(login: "octocat") {
+    repositories(first: 100) {
+      nodes {
+        id
+         url
+         name
+         openIssues: issues(states:OPEN) {
+           totalCount
+         }
+         closedIssues: issues(states:CLOSED) {
+           totalCount
+           }
+           openPullRequests: pullRequests(states:OPEN) {
+             totalCount
+           }
+           mergedPullRequests: pullRequests(states:MERGED) {
+             totalCount
+           }
+           closedPullRequests: pullRequests(states:CLOSED) {
+             totalCount
+           }
+      }
+    }
+  }
+}
